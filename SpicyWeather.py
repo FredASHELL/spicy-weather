@@ -1,12 +1,9 @@
 import requests
 
-def get_spicy_weather():
-    # '0' gives current weather only, 'A' forces ANSI (colors), 
-    # 'Q' makes it quiet (removes 'Weather report' header)
+def get_spicy_weather() 
     url = "https://wttr.in"
     
     try:
-        # We 'fake' a curl user-agent to get the formatted terminal version
         response = requests.get(url, headers={'User-Agent': 'curl'})
         
         if response.status_code == 200:
